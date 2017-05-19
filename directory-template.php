@@ -23,7 +23,7 @@ get_header(); ?>
         	'order'   => 'DESC',
 	);
 
-	$count = 0;			//initialise counter
+	$count = 0;		//initialise counter
 	$check = 'no';		//set author check
 	$people = array();	//initalise author array to check against
 

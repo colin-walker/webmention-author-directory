@@ -40,8 +40,8 @@ get_header(); ?>
 		$parse = parse_url($author_url);
 		$host = $parse['scheme'].'://'.$parse['host'];	//get just the domain portion of the URL
 
-		//check if comment is either a webmention or webmention reply (via Semantic Linkbacks) but NOT from micro.blog
-		if ( (($comment->comment_type == 'webmention' ) || ( $wmreply == 'reply' )) && ( $parse['host'] != 'micro.blog' ) ) {
+		//check if comment is either a webmention or webmention reply (via Semantic Linkbacks)
+		if ( ($comment->comment_type == 'webmention' ) || ( $wmreply == 'reply' ) ) {
 
 			//ensure author domain isn't excluded or name is not blank
 			if (!in_array($parse['host'], $exclusions ) && ( '' != $author )) {

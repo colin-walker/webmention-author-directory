@@ -36,7 +36,7 @@ get_header(); ?>
 
 		$wmreply = get_comment_meta( $comment->comment_ID, 'semantic_linkbacks_type', true );
 		$author = get_comment_author( $comment->comment_ID );
-		$author_url = get_comment_author_url();
+		$author_url = get_comment_author_url( $comment->comment_ID );
 		$parse = parse_url($author_url);
 		$host = $parse['scheme'].'://'.$parse['host'];	//get just the domain portion of the URL
 
